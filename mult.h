@@ -10,14 +10,16 @@
  #ifndef MULT_H
  #define MULT_H
  
- #include "Operacion.h"
+ #include "OperationBase.h"
  
- class Mult : public Operacion {
+ class Mult : public OperationBase {
  public:
-     double ejecutar(int x, int y) override {
+     Mult(int a, int b) : OperationBase(a, b) {}
+     double result() {
          return x * y;
      }
  };
  
  #endif
+ 
  

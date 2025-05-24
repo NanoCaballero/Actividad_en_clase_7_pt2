@@ -10,14 +10,16 @@
  #ifndef SUB_H
  #define SUB_H
  
- #include "Operacion.h"
+ #include "OperationBase.h"
  
- class Sub : public Operacion {
+ class Sub : public OperationBase {
  public:
-     double ejecutar(int x, int y) override {
+     Sub(int a, int b) : OperationBase(a, b) {}
+     double result() {
          return x - y;
      }
  };
  
  #endif
+ 
  

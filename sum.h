@@ -11,11 +11,12 @@
  #ifndef SUM_H
  #define SUM_H
  
- #include "Operacion.h"
+ #include "OperationBase.h"
  
- class Sum : public Operacion {
+ class Sum : public OperationBase {
  public:
-     double ejecutar(int x, int y) override {
+     Sum(int a, int b) : OperationBase(a, b) {}
+     double result() {
          return x + y;
      }
  };

@@ -1,29 +1,30 @@
-#include <iostream>
 
+/*
+ * Copyright (C) 2025 Tec de Monterrey
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program; if not, write to the Free Software Foundation,
+ * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ */
+
+#include <iostream>
 #include "sum.h"
 #include "sub.h"
-#include "div.h"
 #include "mult.h"
-
+#include "div.h"
 
 int main() {
-    Operacion* op;
+    Sum sum(10, 5);
+    std::cout << "Sum: " << sum.result() << std::endl;
 
-    op = new Sum();
-    std::cout << "Suma: " << op->ejecutar(10, 5) << std::endl;
-    delete op;
+    Sub sub(10, 5);
+    std::cout << "Sub: " << sub.result() << std::endl;
 
-    op = new Sub();
-    std::cout << "Resta: " << op->ejecutar(10, 5) << std::endl;
-    delete op;
+    Mult mult(10, 5);
+    std::cout << "Mult: " << mult.result() << std::endl;
 
-    op = new Mult();
-    std::cout << "Multiplicacion: " << op->ejecutar(10, 5) << std::endl;
-    delete op;
-
-    op = new Div();
-    std::cout << "Division: " << op->ejecutar(10, 5) << std::endl;
-    delete op;
+    Div div(10, 5);
+    std::cout << "Div: " << div.result() << std::endl;
 
     return 0;
 }

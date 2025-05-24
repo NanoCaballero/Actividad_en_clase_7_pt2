@@ -7,13 +7,16 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef OPERACION_H
-#define OPERACION_H
-
-class Operacion {
-public:
-    virtual double ejecutar(int x, int y) = 0;
-    virtual ~Operacion() {}
-};
-
-#endif
+ #ifndef OPERATION_BASE_H
+ #define OPERATION_BASE_H
+ 
+ class OperationBase {
+ protected:
+     int x, y;
+ 
+ public:
+     OperationBase(int a, int b) : x(a), y(b) {}
+     virtual ~OperationBase() {}
+ };
+ 
+ #endif

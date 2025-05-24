@@ -10,11 +10,12 @@
  #ifndef DIV_H
  #define DIV_H
  
- #include "Operacion.h"
+ #include "OperationBase.h"
  
- class Div : public Operacion {
+ class Div : public OperationBase {
  public:
-     double ejecutar(int x, int y) override {
+     Div(int a, int b) : OperationBase(a, b) {}
+     double result() {
          return (y != 0) ? static_cast<double>(x) / y : 0;
      }
  };
