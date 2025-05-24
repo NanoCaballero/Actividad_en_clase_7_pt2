@@ -7,16 +7,17 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include <math.h>
-#include <stdexcept>
-
-/**
-  metodo para realizar divisiones de dos numeros
- */
-double divide(int x, int y)
-{
-    if (y != 0)
-        return x / y;
-    else
-        return 0;
-}
+ #ifndef DIV_H
+ #define DIV_H
+ 
+ #include "Operacion.h"
+ 
+ class Div : public Operacion {
+ public:
+     double ejecutar(int x, int y) override {
+         return (y != 0) ? static_cast<double>(x) / y : 0;
+     }
+ };
+ 
+ #endif
+ 

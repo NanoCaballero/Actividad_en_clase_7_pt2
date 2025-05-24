@@ -7,15 +7,15 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
- #ifndef SUB_H
- #define SUB_H
+ #ifndef MULT_H
+ #define MULT_H
  
  #include "Operacion.h"
  
- class Sub : public Operacion {
+ class Mult : public Operacion {
  public:
      double ejecutar(int x, int y) override {
-         return x - y;
+         return x * y;
      }
  };
  

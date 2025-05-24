@@ -8,13 +8,17 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include <math.h>
-#include <stdexcept>
-
-/**
-  metodo para realizar sumas de dos numeros
- */
-double sum(int x, int y)
-{
-    return x + y;
-}
+ #ifndef SUM_H
+ #define SUM_H
+ 
+ #include "Operacion.h"
+ 
+ class Sum : public Operacion {
+ public:
+     double ejecutar(int x, int y) override {
+         return x + y;
+     }
+ };
+ 
+ #endif
+ 

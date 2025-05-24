@@ -7,13 +7,13 @@
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
- #include <math.h>
- #include <stdexcept>
- 
- /**
-   metodo para realizar multiplicacion de dos numeros
-  */
- double mult(int x, int y)
- {
-     return x * y;
- }
+#ifndef OPERACION_H
+#define OPERACION_H
+
+class Operacion {
+public:
+    virtual double ejecutar(int x, int y) = 0;
+    virtual ~Operacion() {}
+};
+
+#endif

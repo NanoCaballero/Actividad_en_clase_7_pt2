@@ -3,15 +3,27 @@
 #include "sum.h"
 #include "sub.h"
 #include "div.h"
-#include "multiplicar.h"
+#include "mult.h"
 
-using std::cout;
 
 int main() {
+    Operacion* op;
 
-    std::cout << "sum(1, 5) = " << sum(1, 5) << '\n';
-    std::cout << "sub(5, 1) = " << sub(5, 1) << '\n';
-    std::cout << "div(9, 3) = " << divide(9, 3) << '\n';
-    std::cout << "div(9, 3) = " << mult(9, 3) << '\n';
+    op = new Sum();
+    std::cout << "Suma: " << op->ejecutar(10, 5) << std::endl;
+    delete op;
+
+    op = new Sub();
+    std::cout << "Resta: " << op->ejecutar(10, 5) << std::endl;
+    delete op;
+
+    op = new Mult();
+    std::cout << "Multiplicacion: " << op->ejecutar(10, 5) << std::endl;
+    delete op;
+
+    op = new Div();
+    std::cout << "Division: " << op->ejecutar(10, 5) << std::endl;
+    delete op;
+
     return 0;
 }
